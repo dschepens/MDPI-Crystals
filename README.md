@@ -61,7 +61,7 @@ Let's imagine a situation where we want to find the general overlap area between
 </p>
 
 
-The first step is to identify pairs of atoms that overlap. In our example, the red circle overlaps with both blue circles. Hence, our pairs are: **(red, larger blue)** and **(red, smaller blue)**.
+The first step is to identify pairs of atoms that overlap. In our example, the red circle overlaps with both blue circles. Hence, our pairs are: **(red, larger blue)** and **(red, smaller blue)**. Since the goal is to find the overlap area between red and blue molecules, the overlapping area between blue circles is not considered.
 
 ### Step 2
 
@@ -79,7 +79,7 @@ Next, the grid is formed around the overlap area of the first pair. Using simple
   <img src="algorithm_images/area1.png" width="500"/>
 </p>
 
-The grid is then iterated through to calculate the distance from the center of each square to the centers of both circles. To identify whether a square is inside the overlap area, the distance to the center of circle 1 needs to be smaller than the radius of circle 1 **AND** the distance to the center of circle 2 needs to be smaller than the radius of circle 2. If a square is in the overlapping area, the coordinates of the center of the square are added to a list that tracks all overlapping squares.
+The grid is then iterated through to calculate the distance from the center of each square to the centers of both circles. To identify whether a square is inside the overlap area, the distances from the center of the square to the centers of the circles must be smaller than the respective radii of the circles. If a square is in the overlapping area, the coordinates of the center of the square are added to a list to track all overlapping squares.
 
 ### Step 4
 
