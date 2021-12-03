@@ -1,6 +1,6 @@
 # MDPI Crystals: by Almat Yeraly and Dr. Diana Schepens
 
-### Example: How to run the code to calculate the overlap volume of 2 Molecules
+## Example: How to run the code to calculate the overlap volume of 2 Molecules
 
 ```cpp
 #include <iostream>
@@ -48,13 +48,13 @@ Overlap vol % relative to Molecule 1: 0.913833
 Overlap vol % relative to Molecule 1: 0.995541
 ```
 
-### Visual Explanation of the Algorithm: Step-by-step breakdown
+## Visual Explanation of the Algorithm: Step-by-step breakdown
 
 *For the sake of simplicity, we are using 2D images. A circle represents a sphere, which represents an Atom.*
 
 Let's imagine a situation where we want to find the general overlap area between 2 molecules. Let Molecule 1 be the red circle and Molecule 2 be the blue circles. Both of the molecules are located in a 3D space, and the coordinates of the centers and radii of each circle are given.
 
-#### Step 1
+### Step 1
 
 <p align="center">
   <img src="algorithm_images/circles.png" width="500"/>
@@ -63,7 +63,7 @@ Let's imagine a situation where we want to find the general overlap area between
 
 The first step is to identify pairs of atoms that overlap. In our example, the red circle overlaps with both blue circles. Hence, our pairs are: **(red, larger blue)** and **(red, smaller blue)**.
 
-#### Step 2
+### Step 2
 
 <p align="center">
   <img src="algorithm_images/grid1.png" width="500"/>
@@ -73,7 +73,7 @@ Next, the grid is formed around the overlap area of the first pair. Using simple
 - [This article](https://mathworld.wolfram.com/Circle-CircleIntersection.html) and [this Github repository](https://github.com/benfred/bens-blog-code/tree/master/circle-intersection) were used as references to calculate X<sub>min</sub>, X<sub>max</sub>, Y<sub>min</sub>, Y<sub>max</sub>. 
 - [This article](http://www.ambrsoft.com/TrigoCalc/Sphere/TwoSpheres/Intersection.htm) explains how to find the equation of a 2D circle that goes through the intersection points of 2 spheres. After finding the center of the intersection circle, we added and subtracted the radius of the smaller sphere to calculate Z<sub>min</sub>, Z<sub>max</sub>, thus forming a grid in a 3D space.
 
-#### Step 3
+### Step 3
 
 <p align="center">
   <img src="algorithm_images/area1.png" width="500"/>
@@ -81,7 +81,7 @@ Next, the grid is formed around the overlap area of the first pair. Using simple
 
 The grid is then iterated through to calculate the distance from the center of each square to the centers of both circles. To identify whether a square is inside the overlap area, the distance to the center of circle 1 needs to be smaller than the radius of circle 1 **AND** the distance to the center of circle 2 needs to be smaller than the radius of circle 2. If a square is in the overlapping area, the coordinates of the center of the square are added to a list that tracks all overlapping squares.
 
-#### Step 4
+### Step 4
 
 <p align="center">
   <img src="algorithm_images/area2.png" width="500"/>
@@ -89,12 +89,12 @@ The grid is then iterated through to calculate the distance from the center of e
 
 The same process is repeated with the next pair of overlapping Atoms. 
 
-#### Step 5
+### Step 5
 
 All lists that contain coordinates of all overlapping squares are then combined to a single list. Notice that there are overlapping squares in second pair that were also present in the first pair, those squares are not duplicated in the final list.
 
 
-#### Step 6
+### Step 6
 <p align="center">
   <img src="algorithm_images/full_area.png" width="500"/>
 </p>
