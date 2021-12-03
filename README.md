@@ -91,7 +91,7 @@ The same process is repeated with the next pair of overlapping Atoms.
 
 ### Step 5
 
-All lists that contain coordinates of all overlapping squares are then combined to a single list. Notice that there are overlapping squares in second pair that were also present in the first pair, those squares are not duplicated in the final list.
+All lists that contain coordinates of all overlapping squares are then combined to a single list. Notice that there are overlapping squares in second pair that were also present in the first pair, however, those squares are not duplicated in the final list.
 
 
 ### Step 6
