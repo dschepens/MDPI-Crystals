@@ -70,7 +70,7 @@ The first step is to identify pairs of atoms that overlap. In our example, the r
 </p>
 
 Next, the grid is formed around the overlap area of the first pair. Using simple geometry, the coordinates for X<sub>min</sub>, X<sub>max</sub>, Y<sub>min</sub>, Y<sub>max</sub> are calculated. In a 3D space, it is also possible to calculate Z<sub>min</sub>, Z<sub>max</sub>.
-- This article(https://mathworld.wolfram.com/Circle-CircleIntersection.html) and [this Github repository](https://github.com/benfred/bens-blog-code/tree/master/circle-intersection) were used as references to calculate X<sub>min</sub>, X<sub>max</sub>, Y<sub>min</sub>, Y<sub>max</sub>. 
+- [This article](https://mathworld.wolfram.com/Circle-CircleIntersection.html) and [this Github repository](https://github.com/benfred/bens-blog-code/tree/master/circle-intersection) were used as references to calculate X<sub>min</sub>, X<sub>max</sub>, Y<sub>min</sub>, Y<sub>max</sub>. 
 - [This article](http://www.ambrsoft.com/TrigoCalc/Sphere/TwoSpheres/Intersection.htm) explains how to find the equation of a 2D circle that goes through the intersection points of 2 spheres. After finding the center of the intersection circle, we added and subtracted the radius of the smaller sphere to calculate Z<sub>min</sub>, Z<sub>max</sub>, thus forming a grid in a 3D space.
 
 #### Step 3
